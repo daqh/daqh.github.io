@@ -12,9 +12,10 @@ jobs:
       with:
         fetch-depth: 0
     - name: Generate the sitemap
+      id: sitemap
       uses: cicirello/generate-sitemap@v1
       with:
-        base-url-path: https://daqh.github.io
+        base-url-path: https://daqh.github.io/
         sitemap-format: txt
     - name: Output stats
       run: |
