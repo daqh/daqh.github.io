@@ -299,5 +299,28 @@
         const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
     </script>
 
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+    
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+        apiKey: "AIzaSyBBFU-7f7KD5FRlyIhvOd6_SrYmLwnPu34",
+        authDomain: "daqh-github-io.firebaseapp.com",
+        projectId: "daqh-github-io",
+        storageBucket: "daqh-github-io.firebasestorage.app",
+        messagingSenderId: "840051777947",
+        appId: "1:840051777947:web:3a8e03b3292b7e1caf413e",
+        measurementId: "G-S4M93DNNML"
+        };
+    
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
 </body>
 </html>
