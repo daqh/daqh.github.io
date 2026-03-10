@@ -403,5 +403,22 @@
         const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl));
     </script>
 
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-analytics.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBBFU-7f7KD5FRlyIhvOd6_SrYmLwnPu34",
+            authDomain: "daqh-github-io.firebaseapp.com",
+            projectId: "daqh-github-io",
+            storageBucket: "daqh-github-io.firebasestorage.app",
+            messagingSenderId: "840051777947",
+            appId: "1:840051777947:web:3a8e03b3292b7e1caf413e",
+            measurementId: "G-S4M93DNNML"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
 </body>
 </html>
