@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://daqh.github.io/sitemap.xml
+LLM: https://daqh.github.io/llm.txt

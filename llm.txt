@@ -1,0 +1,49 @@
+# Valerio Di Pasquale
+
+> PhD Student in Computer Science and Information Technology at Università degli Studi di Salerno. Research focuses on artificial intelligence for complex networks, with particular attention to graph and hypergraph generative models, motif analysis, link prediction, and graph-based representation learning. Also interested in combining graph models with large language models for structured-data reasoning.
+
+## About
+
+Valerio Di Pasquale is a PhD student based in Salerno, Italy. His work sits at the intersection of machine learning and network science. Alongside research, he has professional experience in web design and development and a long-standing freelance background building applications for individuals and small businesses.
+
+## Research Interests
+
+Current directions: generative models for graphs and hypergraphs, link prediction and hyperlink prediction, motif analysis in real-world networks, graph representation learning, geometric deep learning and graph neural networks.
+
+Broader interests: large language models for structured data reasoning, graph-to-text generation and question answering over graphs, diffusion models and variational autoencoders, applications to biology and social systems, interpretable AI methods for network analysis.
+
+## Publications
+
+- Alessia Antelmi, Gennaro Cordasco, Daniele De Vinco, Valerio Di Pasquale, Mirko Polato, and Carmine Spagnuolo. 2025. Hypergraph Motif Representation Learning. In Proceedings of the 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD '25), 13-24. https://dl.acm.org/doi/10.1145/3690624.3709274
+
+## Education
+
+- PhD Student, Computer Science and Information Technology — Università degli Studi di Salerno (November 2025 – present)
+- Master's Degree in Computer Science — Università degli Studi di Salerno (2023–2025), GPA 4.0/4.0
+- Excellence Program (Percorso di Eccellenza) — Università degli Studi di Salerno (2024–2025)
+- Bachelor's Degree in Computer Science — Università degli Studi di Salerno (2020–2023), GPA 3.925/4.0, 110/110 cum laude. Dissertation: Generative Models for Hypergraphs using Deep Learning.
+
+## Experience
+
+Research: artifact reviewer for ACM badge assignment at KDD 2025; research scholarships at the Department of Computer Science (AI for complex networks, EHEALTHNET project) and at the Department of Humanities (LLMs and Semantic Web for historical toponymy), Università degli Studi di Salerno.
+
+Professional: web design and development at Centro Regionale Information Communication Technology (3Dify project, 2024); freelance developer since 2017, working with Angular, Django, and WordPress.
+
+## Projects
+
+- [Higher-Order Networks](https://huggingface.co/collections/daqh/higher-order-networks): curated collection of hypergraph datasets in HIF format with precomputed node and hyperedge features, published on Hugging Face Hub.
+- [Health Tracking System](https://github.com/daqh/health-tracking-system): cloud-based system with a web frontend and serverless backend for tracking health data from IoT devices.
+- [Parallel Deep Generative Model for Hypergraph](https://github.com/daqh/parallel_deep_hypergraph_generation): deep variational autoencoder for generating synthetic hypergraphs in parallel, implemented in Python with PyTorch.
+- [Dubito](https://github.com/daqh/dubito-cli): Python package for monitoring listings on subito.it through queries and filters.
+
+## Contact
+
+- Email: valeriodipasq@gmail.com
+- LinkedIn: https://www.linkedin.com/in/valerio-di-pasquale/
+- GitHub: https://github.com/daqh
+- Google Scholar: https://scholar.google.com/citations?user=VTOSp8IAAAAJ
+- ResearchGate: https://www.researchgate.net/profile/Valerio-Di-Pasquale
+
+## Optional
+
+- [Profile page](https://daqh.github.io/): full academic profile with sections on research, education, experience, projects, skills, and contact.
