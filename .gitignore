@@ -34,8 +34,12 @@ _testmain.go
 # mac hidden files
 .DS_Store
 
+## Claude Code local settings
+.claude/
+
 ##other
-#node_modules/
+node_modules/
+_site/
 #bower_components/
 .tmp
 #.sass-cache
