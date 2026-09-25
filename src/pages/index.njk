@@ -1,4 +1,5 @@
 {% extends "layouts/base.njk" %}
+{% from "components/section.njk" import section %}
 
 {% set title = "Valerio Di Pasquale | PhD Student in Computer Science" %}
 {% set description = "Valerio Di Pasquale is a PhD Student in Computer Science and Information Technology at Università degli Studi di Salerno, working on AI methods for complex networks, graphs, hypergraphs, and LLM-based reasoning over structured data." %}
@@ -68,7 +69,7 @@
 
 {% block content %}
 
-        <section id="about" class="row min-vh-100 align-items-center g-4" aria-labelledby="about-heading">
+        {% call section("about-heading") %}
             <div class="col-lg-5 col-sm-12">
                 <img src="assets/valerio_di_pasquale.jpeg" class="img-fluid" alt="Valerio Di Pasquale" width="600" height="600" loading="eager" decoding="async">
             </div>
@@ -93,11 +94,11 @@
                     I am based in Salerno, Italy, and I currently work across research, software development, and academic projects at the intersection of machine learning and network science.
                 </p>
             </div>
-        </section>
+        {% endcall %}
 
         <hr class="mt-5">
 
-        <section id="research" class="row min-vh-100 align-items-center" aria-labelledby="research-heading">
+        {% call section("research-heading") %}
             <div>
                 <div class="row align-items-center">
                     <div class="col-md-6">
@@ -154,11 +155,11 @@
                     </li>
                 </ul>
             </div>
-        </section>
+        {% endcall %}
 
         <hr class="mt-5">
 
-        <section id="education" class="row min-vh-100 align-items-center" aria-labelledby="education-heading">
+        {% call section("education-heading") %}
             <div>
                 <h2 id="education-heading" class="display-2">
                     <i class="fa fa-graduation-cap"></i>
@@ -209,11 +210,11 @@
                     </li>
                 </ul>
             </div>
-        </section>
+        {% endcall %}
 
         <hr class="mt-5">
 
-        <section id="experience" class="row min-vh-100 align-items-center" aria-labelledby="experience-heading">
+        {% call section("experience-heading") %}
             <div>
                 <h2 id="experience-heading" class="display-2">
                     <i class="fa fa-suitcase"></i>
@@ -263,133 +264,129 @@
                     </li>
                 </ul>
             </div>
-        </section>
+        {% endcall %}
 
         <hr class="mt-5">
 
-        <section id="projects" class="row min-vh-100 align-items-center" aria-labelledby="projects-heading">
-            <div>
-                <h2 id="projects-heading" class="display-2">
-                    <i class="fa fa-folder-open"></i>
-                    Projects
-                </h2>
-                <ul>
-                    <li>
-                        <div>
-                            <a href="https://huggingface.co/collections/daqh/higher-order-networks" target="_blank" rel="noopener noreferrer" aria-label="View Higher-Order Networks collection on Hugging Face">
-                                <i class="fa fa-link"></i>
-                            </a>
-                            <b>Higher-Order Networks</b>
-                        </div>
-                        <div>
-                            A curated collection of hypergraph datasets stored in HIF (Hypergraph Interchange Format), including precomputed node and hyperedge features. Published on Hugging Face Hub.
-                        </div>
-                    </li>
-                    <li class="mt-3">
-                        <div>
-                            <a href="https://github.com/daqh/health-tracking-system" target="_blank" rel="noopener noreferrer" aria-label="View Health Tracking System on GitHub">
-                                <i class="fa fa-link"></i>
-                            </a>
-                            <b>Health Tracking System</b>
-                        </div>
-                        <div>
-                            A cloud-based system with a web frontend and a serverless backend for tracking health data from IoT devices, designed as a scalable and low-cost architecture.
-                        </div>
-                    </li>
-                    <li class="mt-3">
-                        <div>
-                            <a href="https://github.com/daqh/parallel_deep_hypergraph_generation" target="_blank" rel="noopener noreferrer" aria-label="View Parallel Deep Generative Model for Hypergraph on GitHub">
-                                <i class="fa fa-link"></i>
-                            </a>
-                            <b>Parallel Deep Generative Model for Hypergraph</b>
-                        </div>
-                        <div>
-                            Bachelor's thesis project focused on a deep variational autoencoder for generating synthetic hypergraphs in parallel, implemented in Python with PyTorch.
-                        </div>
-                    </li>
-                    <li class="mt-3">
-                        <div>
-                            <a href="https://github.com/daqh/dubito-cli" target="_blank" rel="noopener noreferrer" aria-label="View Dubito on GitHub">
-                                <i class="fa fa-link"></i>
-                            </a>
-                            <b>Dubito</b>
-                        </div>
-                        <div>
-                            A Python package for monitoring listings on subito.it through queries and filters, developed as a practical public tool from a personal need.
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <hr class="mt-5">
-
-        <section id="skills" class="row min-vh-100 align-items-center" aria-labelledby="skills-heading">
-            <div>
-                <h2 id="skills-heading" class="display-2">
+        {% call section("projects-and-skills") %}
+            <div class="row">
+                <h2 id="projects-and-skills-heading" class="display-2">
                     <i class="fa fa-code"></i>
-                    Skills
+                    Projects &amp; Skills
                 </h2>
-                <p class="lead">
-                    My technical work combines machine learning research, graph analysis, high-performance computing, and web development. Python is my primary language for research, while C/C++, Cython, and modern web technologies support production, optimization, and applied development work.
-                </p>
+            </div>
+            <div class="row">
+                <div class="col">
 
-                <div class="row g-4 mt-1">
-                    <div class="col-lg-4">
-                        <h3>AI &amp; Research</h3>
-                        <ul>
-                            <li>PyTorch</li>
-                            <li>PyTorch Geometric</li>
-                            <li>PyTorch Lightning</li>
-                            <li>Scikit-Learn</li>
-                            <li>Graph and hypergraph analysis</li>
-                        </ul>
+                    <p class="lead">
+                        My technical work combines machine learning research, graph analysis, high-performance computing, and web development. Python is my primary language for research, while C/C++, Cython, and modern web technologies support production, optimization, and applied development work.
+                    </p>
+
+                    <div class="row g-4 mt-1">
+                        <div class="col-lg-4">
+                            <h3>AI &amp; Research</h3>
+                            <ul>
+                                <li>PyTorch</li>
+                                <li>PyTorch Geometric</li>
+                                <li>PyTorch Lightning</li>
+                                <li>Scikit-Learn</li>
+                                <li>Graph and hypergraph analysis</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4">
+                            <h3>Programming</h3>
+                            <ul>
+                                <li>Python</li>
+                                <li>C</li>
+                                <li>C++</li>
+                                <li>Cython</li>
+                                <li>NumPy</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4">
+                            <h3>Web Development</h3>
+                            <ul>
+                                <li>Angular</li>
+                                <li>Django</li>
+                                <li>WordPress</li>
+                                <li>Frontend architecture</li>
+                                <li>SEO-oriented content management</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="col-lg-4">
-                        <h3>Programming</h3>
-                        <ul>
-                            <li>Python</li>
-                            <li>C</li>
-                            <li>C++</li>
-                            <li>Cython</li>
-                            <li>NumPy</li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-4">
-                        <h3>Web Development</h3>
-                        <ul>
-                            <li>Angular</li>
-                            <li>Django</li>
-                            <li>WordPress</li>
-                            <li>Frontend architecture</li>
-                            <li>SEO-oriented content management</li>
-                        </ul>
+
+                    <div class="row mt-5">
+                        <div class="col text-center">
+                            <i class="fa-brands fa-python fa-5x"></i>
+                        </div>
+                        <div class="col text-center">
+                            <i class="fa-brands fa-docker fa-5x"></i>
+                        </div>
+                        <div class="col text-center">
+                            <i class="fa-brands fa-angular fa-5x"></i>
+                        </div>
+                        <div class="col text-center">
+                            <i class="fa-brands fa-wordpress fa-5x"></i>
+                        </div>
+                        <div class="col text-center">
+                            <i class="fa-brands fa-linux fa-5x"></i>
+                        </div>
                     </div>
                 </div>
-
-                <div class="row mt-5">
-                    <div class="col text-center">
-                        <i class="fa-brands fa-python fa-5x"></i>
-                    </div>
-                    <div class="col text-center">
-                        <i class="fa-brands fa-docker fa-5x"></i>
-                    </div>
-                    <div class="col text-center">
-                        <i class="fa-brands fa-angular fa-5x"></i>
-                    </div>
-                    <div class="col text-center">
-                        <i class="fa-brands fa-wordpress fa-5x"></i>
-                    </div>
-                    <div class="col text-center">
-                        <i class="fa-brands fa-linux fa-5x"></i>
-                    </div>
+                <div class="col">
+                    <ul>
+                        <li>
+                            <div>
+                                <a href="https://huggingface.co/collections/daqh/higher-order-networks" target="_blank" rel="noopener noreferrer" aria-label="View Higher-Order Networks collection on Hugging Face">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                                <b>Higher-Order Networks</b>
+                            </div>
+                            <div>
+                                A curated collection of hypergraph datasets stored in HIF (Hypergraph Interchange Format), including precomputed node and hyperedge features. Published on Hugging Face Hub.
+                            </div>
+                        </li>
+                        <li class="mt-3">
+                            <div>
+                                <a href="https://github.com/daqh/health-tracking-system" target="_blank" rel="noopener noreferrer" aria-label="View Health Tracking System on GitHub">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                                <b>Health Tracking System</b>
+                            </div>
+                            <div>
+                                A cloud-based system with a web frontend and a serverless backend for tracking health data from IoT devices, designed as a scalable and low-cost architecture.
+                            </div>
+                        </li>
+                        <li class="mt-3">
+                            <div>
+                                <a href="https://github.com/daqh/parallel_deep_hypergraph_generation" target="_blank" rel="noopener noreferrer" aria-label="View Parallel Deep Generative Model for Hypergraph on GitHub">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                                <b>Parallel Deep Generative Model for Hypergraph</b>
+                            </div>
+                            <div>
+                                Bachelor's thesis project focused on a deep variational autoencoder for generating synthetic hypergraphs in parallel, implemented in Python with PyTorch.
+                            </div>
+                        </li>
+                        <li class="mt-3">
+                            <div>
+                                <a href="https://github.com/daqh/dubito-cli" target="_blank" rel="noopener noreferrer" aria-label="View Dubito on GitHub">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                                <b>Dubito</b>
+                            </div>
+                            <div>
+                                A Python package for monitoring listings on subito.it through queries and filters, developed as a practical public tool from a personal need.
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </section>
+        {% endcall %}
 
         <hr class="mt-5">
 
-        <section id="contact" class="row min-vh-100 align-items-center" aria-labelledby="contact-heading">
+        {% call section("contact-heading") %}
             <div>
                 <h2 id="contact-heading" class="display-2">Contact</h2>
                 <p class="lead">
@@ -406,6 +403,6 @@
                     <i class="fa fa-github fa-5x"></i>
                 </a>
             </div>
-        </section>
+        {% endcall %}
 
 {% endblock %}

@@ -1,0 +1,5 @@
+{% macro section(label, href="#", variant="primary") %}
+    <section id="{{ label }}" class="row min-vh-100 align-content-center g-4" aria-labelledby="{{ label }}-section">
+        {{ caller() }}
+    </section>
+{% endmacro %}
