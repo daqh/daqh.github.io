@@ -1,16 +1,27 @@
-{% macro publication(authors, year, title, venue, paperUrl, codeUrl, pages="", posterUrl="") %}
-    <li class="mb-3">
-        {{ authors }}. {{ year }}. {{ title }}. In <i>{{ venue }}</i>{% if pages %}, {{ pages }}{% endif %}.
-        <a href="{{ paperUrl }}" target="_blank" rel="noopener noreferrer">
-            <span class="badge text-bg-primary">Paper</span>
+{% macro publication(authors, year, kind, title, venue, venueShort, paperUrl, codeUrl, posterUrl="", color) %}
+    <li class="list-group-item">
+        <a>
+            <span class="badge text-bg-{{color}}">{{ venueShort }}</span>
         </a>
-        <a href="{{ codeUrl }}" target="_blank" rel="noopener noreferrer">
-            <span class="badge text-bg-success">Code</span>
-        </a>
+        <span class="text-muted">{{ year }}</span>
+        &#183;
+        <span class="text-muted">{{ kind }}</span>
+        <h4>{{ title }}</h4>
+        <p>
+            {{ authors }}
+            <br>
+            <span class="text-muted">
+                <small>{{ venue }}</small>
+            </span>
+        </p>
+        {% if paperUrl %}
+            <a href="{{ paperUrl }}" target="_blank" class="btn btn-outline-primary btn-sm">Paper</a>
+        {% endif %}
+        {% if codeUrl %}
+            <a href="{{ codeUrl }}" target="_blank" class="btn btn-outline-primary btn-sm">Code</a>
+        {% endif %}
         {% if posterUrl %}
-        <a href="{{ posterUrl }}" target="_blank">
-            <span class="badge text-bg-info">Poster</span>
-        </a>
+            <a href="{{ posterUrl }}" target="_blank" class="btn btn-outline-primary btn-sm">Poster</a>
         {% endif %}
     </li>
 {% endmacro %}
