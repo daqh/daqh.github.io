@@ -1,0 +1,16 @@
+{% macro publication(authors, year, title, venue, paperUrl, codeUrl, pages="", posterUrl="") %}
+    <li class="mb-3">
+        {{ authors }}. {{ year }}. {{ title }}. In <i>{{ venue }}</i>{% if pages %}, {{ pages }}{% endif %}.
+        <a href="{{ paperUrl }}" target="_blank" rel="noopener noreferrer">
+            <span class="badge text-bg-primary">Paper</span>
+        </a>
+        <a href="{{ codeUrl }}" target="_blank" rel="noopener noreferrer">
+            <span class="badge text-bg-success">Code</span>
+        </a>
+        {% if posterUrl %}
+        <a href="{{ posterUrl }}" target="_blank">
+            <span class="badge text-bg-info">Poster</span>
+        </a>
+        {% endif %}
+    </li>
+{% endmacro %}

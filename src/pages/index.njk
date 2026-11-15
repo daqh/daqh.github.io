@@ -1,5 +1,6 @@
 {% extends "layouts/base.njk" %}
 {% from "components/section.njk" import section %}
+{% from "components/publication.njk" import publication %}
 
 {% set title = "Valerio Di Pasquale | PhD Student in Computer Science" %}
 {% set description = "Valerio Di Pasquale is a PhD Student in Computer Science and Information Technology at Università degli Studi di Salerno, working on AI methods for complex networks, graphs, hypergraphs, and LLM-based reasoning over structured data." %}
@@ -148,39 +149,33 @@
 
                 <h3 class="mt-4">Selected Publication</h3>
                 <ul>
-                    <li>
-                        Valerio Di Pasquale, Alessia Antelmi, Mirko Polato, and Carmine Spagnuolo. 2026. Hypergraph Generation with Latent Diffusion. In <i>Proceedings of the 40th Annual Conference on Neural Information Processing Systems (NeurIPS '26)</i>.
-                        <a href="https://neurips.cc/virtual/2026/loc/sydney/poster/154651" target="_blank" rel="noopener noreferrer">
-                            <span class="badge text-bg-primary">Paper</span>
-                        </a>
-                        <a href="https://github.com/hypernetwork-research-group/janus" target="_blank" rel="noopener noreferrer">
-                            <span class="badge text-bg-success">Code</span>
-                        </a>
-                    </li>
-                    <li>
-                        Alessia Antelmi, Tiziano Citro, Dario De Maio, Daniele De Vinco, Valerio Di Pasquale, Mirko Polato, and Carmine Spagnuolo. 2026. Hyperlink Prediction on Hypergraphs of Text. In <i>Proceedings of the 35th ACM International Conference on Information and Knowledge Management (CIKM '26)</i>.
-                        <a href="https://dl.acm.org/doi/10.1145/3799682.3839872" target="_blank" rel="noopener noreferrer">
-                            <span class="badge text-bg-primary">Paper</span>
-                        </a>
-                        <a href="https://github.com/hypernetwork-research-group/hphot" target="_blank" rel="noopener noreferrer">
-                            <span class="badge text-bg-success">Code</span>
-                        </a>
-                        <a href="assets/PosterCIKM26.pdf" target="_blank">
-                            <span class="badge text-bg-info">Poster</span>
-                        </a>
-                    </li>
-                    <li>
-                        Alessia Antelmi, Gennaro Cordasco, Daniele De Vinco, Valerio Di Pasquale, Mirko Polato, and Carmine Spagnuolo. 2025. Hypergraph Motif Representation Learning. In <i>Proceedings of the 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD '25)</i>, 13-24.
-                        <a href="https://dl.acm.org/doi/10.1145/3690624.3709274" target="_blank" rel="noopener noreferrer">
-                            <span class="badge text-bg-primary">Paper</span>
-                        </a>
-                        <a href="https://github.com/hypernetwork-research-group/motif_representation_learning" target="_blank" rel="noopener noreferrer">
-                            <span class="badge text-bg-success">Code</span>
-                        </a>
-                        <a href="assets/PosterKDD25.pdf" target="_blank">
-                            <span class="badge text-bg-info">Poster</span>
-                        </a>
-                    </li>
+                    {{ publication(
+                        authors="Valerio Di Pasquale, Alessia Antelmi, Mirko Polato, and Carmine Spagnuolo",
+                        year=2026,
+                        title="Hypergraph Generation with Latent Diffusion",
+                        venue="Proceedings of the 40th Annual Conference on Neural Information Processing Systems (NeurIPS '26)",
+                        paperUrl="https://neurips.cc/virtual/2026/loc/sydney/poster/154651",
+                        codeUrl="https://github.com/hypernetwork-research-group/janus"
+                    ) }}
+                    {{ publication(
+                        authors="Alessia Antelmi, Tiziano Citro, Dario De Maio, Daniele De Vinco, Valerio Di Pasquale, Mirko Polato, and Carmine Spagnuolo",
+                        year=2026,
+                        title="Hyperlink Prediction on Hypergraphs of Text",
+                        venue="Proceedings of the 35th ACM International Conference on Information and Knowledge Management (CIKM '26)",
+                        paperUrl="https://dl.acm.org/doi/10.1145/3799682.3839872",
+                        codeUrl="https://github.com/hypernetwork-research-group/hphot",
+                        posterUrl="assets/PosterCIKM26.pdf"
+                    ) }}
+                    {{ publication(
+                        authors="Alessia Antelmi, Gennaro Cordasco, Daniele De Vinco, Valerio Di Pasquale, Mirko Polato, and Carmine Spagnuolo",
+                        year=2025,
+                        title="Hypergraph Motif Representation Learning",
+                        venue="Proceedings of the 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD '25)",
+                        paperUrl="https://dl.acm.org/doi/10.1145/3690624.3709274",
+                        codeUrl="https://github.com/hypernetwork-research-group/motif_representation_learning",
+                        pages="13-24",
+                        posterUrl="assets/PosterKDD25.pdf"
+                    ) }}
                 </ul>
             </div>
         {% endcall %}
